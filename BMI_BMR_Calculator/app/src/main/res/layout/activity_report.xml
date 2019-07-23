@@ -6,4 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".ReportActivity">
 
+    <TextView
+        android:id="@+id/text_topic"
+        android:layout_width="345dp"
+        android:layout_height="53dp"
+        android:text="@string/app_name"
+        android:textColor="#005E8D"
+        android:textSize="10pt"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:text="@string/name"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="10pt"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307" />
+
+    <TextView
+        android:id="@+id/text_bmi"
+        android:layout_width="81dp"
+        android:layout_height="53dp"
+        android:text="@string/BMI"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="10pt"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424" />
+
+    <TextView
+        android:id="@+id/text_bmr"
+        android:layout_width="80dp"
+        android:layout_height="47dp"
+        android:text="@string/BMR"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="10pt"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517" />
+
 </android.support.constraint.ConstraintLayout>

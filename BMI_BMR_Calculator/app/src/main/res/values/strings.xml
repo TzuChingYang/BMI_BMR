@@ -10,4 +10,6 @@
     <string name="age">Age:</string>
     <string name="button_clear">CLEAR</string>
     <string name="button_calculate">CALCULATE</string>
+    <string name="BMI">BMI:</string>
+    <string name="BMR">BMR:</string>
 </resources>
