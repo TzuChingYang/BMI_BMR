@@ -14,4 +14,6 @@
     <string name="textview_none">none</string>
     <string name="BMI">BMI:</string>
     <string name="BMR">BMR:</string>
+
+    <string name="error_message">error</string>
 </resources>

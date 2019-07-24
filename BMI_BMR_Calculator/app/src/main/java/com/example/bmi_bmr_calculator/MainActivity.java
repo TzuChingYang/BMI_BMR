@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editText_height;
     private EditText editText_weight;
     private EditText editText_age;
+
     private Intent intent;
     private Bundle bundle;
 
@@ -63,12 +64,19 @@ public class MainActivity extends AppCompatActivity {
         button_calculate.setOnClickListener(calculate_and_turnPAGE);
         button_clear.setOnClickListener(Clear);
     }
-    //Here to send data to another page
-    private void send_data(){
+    //Here to send data to another page and turn page
+    private void send_data(double BMI,double BMR){
         intent = new Intent() ;
         intent.setClass(MainActivity.this,ReportActivity.class) ;
+        bundle = new Bundle() ;
+
+        //Send three data to Report page
+        bundle.putString("key_name",editText_name.getText().toString());
+        bundle.putDouble("key_bmi",BMI);
+        bundle.putDouble("key_bmr",BMR);
+
+        intent.putExtras(bundle) ;
         startActivity(intent);
-        //bundle = new Bundle() ;
     }
 
     //Listen Event Set
@@ -91,14 +99,14 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.radioButton_male:
                         BMR= 66+(13.7*weight)+(5.0*height*100)-(6.8*age) ;
                         textView_debugger.setText("male BMI:"+nf.format(BMI)+" BMR:"+nf.format(BMR));
-                        send_data();
+                        send_data(BMI,BMR);
                         break;
 
                     //If Female
                     case R.id.radioButton_female:
                         BMR= 655+(9.6*weight)+(1.8*height*100)-(4.7*age) ;
                         textView_debugger.setText("female BMI:"+nf.format(BMI)+" BMR:"+nf.format(BMR));
-                        send_data();
+                        send_data(BMI,BMR);
                         break;
                 }
 
